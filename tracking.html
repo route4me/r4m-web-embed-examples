@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<iframe id="trackingIFrame" src="https://t.route4me.com/?tn=12345678"></iframe>
+
+<script type="application/javascript">
+    (function() {
+        function resize() {
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            const fr = document.getElementById('trackingIFrame');
+            // console.log('resize', w, h);
+            fr.style.width = w+ 'px';
+            fr.style.height = h + 'px';
+        }
+
+        window.addEventListener('resize', resize);
+
+        resize();
+    })();
+</script>
+
+</body>
+</html>
